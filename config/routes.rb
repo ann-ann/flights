@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :flights, only: [:index] do
+      resources :flights, only: [:index, :prefered_flight] do
         collection do
           get :prefered_flight
         end
