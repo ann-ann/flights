@@ -9,10 +9,8 @@ namespace :flights do
     uri = URI('https://gist.githubusercontent.com/bgdavidx/132a9e3b9c70897bc07cfa5ca25747be/raw/8dbbe1db38087fad4a8c8ade48e741d6fad8c872/gistfile1.txt')
     flights_data = JSON.parse(Net::HTTP.get(uri))
 
-
     #load data about airpots
-    airports_data = JSON.parse(Net::HTTP.get(URI("https://gist.githubusercontent.com/tdreyno/4278655/raw/7b0762c09b519f40397e4c3e100b097d861f5588/airports.json")))
-
+    airports_data = JSON.parse(Net::HTTP.get(URI('https://gist.githubusercontent.com/tdreyno/4278655/raw/7b0762c09b519f40397e4c3e100b097d861f5588/airports.json')))
 
     # we will fill out our flights table
     flights_data.each do |data|
